@@ -17,5 +17,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+	stage('Email') {
+            steps {
+                mail bcc: '', body: 'Hello', cc: '', from: '', replyTo: '', subject: 'Hello', to: 'devendradhoot@gmail.com'
+            }
+        }
     }
 }
